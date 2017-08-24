@@ -10,3 +10,6 @@ item.emerald_chestplate.name=emerald chest plate
 item.emerald_leggings.name=emerald leggings
 item.emerald_boots.name=emerald boots
 tile.diamond_brick_stairs.name=diamond brick stairs
+tile.diamond_brick_slab_half.name=Diamond Brick Slab
+tile.diamond_brick_fence.name=Diamond Brick Fence
+tile.diamond_brick_fence_gate.name=Diamond Brick Fence Gate
