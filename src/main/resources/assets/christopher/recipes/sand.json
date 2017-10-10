@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "sand",
+  "pattern": [
+    "CCC",
+    "COC",
+    "CCC"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:cobblestone"
+    },
+    "O": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "minecraft:sand",
+    "count": 8,
+    "data": 0
+  }
+}
