@@ -1,10 +1,11 @@
 package christopher.tutorial.handlers;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import christopher.tutorial.gen.ExperienceOreGen;
 import christopher.tutorial.init.ArmorInit;
+import christopher.tutorial.init.BlockInit;
 import christopher.tutorial.init.Fuels;
 import christopher.tutorial.init.ItemInit;
-import christopher.tutorial.init.BlockInit;
 import christopher.tutorial.init.ToolInit;
 
 public class RegistryHandler 
@@ -28,5 +29,10 @@ public class RegistryHandler
 		
 		ArmorInit.init();
 		ArmorInit.register();
+		
+		TileEntityHandler.register();
+		GUIHandler.register();
+		
+		GameRegistry.registerWorldGenerator(new ExperienceOreGen(), 0);
 	}
 }
