@@ -1,27 +1,25 @@
 package christopher.tutorial.init;
 
-import christopher.tutorial.init.blocks.CustomBlockFurnace;
-import christopher.tutorial.init.blocks.DiamondBrick;
-import christopher.tutorial.init.blocks.DiamondBrickStairs;
-import christopher.tutorial.init.blocks.fence.DiamondBrickFence;
-import christopher.tutorial.init.blocks.fence.DiamondBrickFenceGate;
-import christopher.tutorial.init.blocks.slab.DiamondBrickDoubleSlab;
-import christopher.tutorial.init.blocks.slab.DiamondBrickHalfSlab;
-import christopher.tutorial.tabs.ChristopherTab;
-import christopher.tutorial.Reference;
-import christopher.tutorial.Tutorial;
 import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.ItemMeshDefinition;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemSlab;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import christopher.tutorial.Reference;
+import christopher.tutorial.Tutorial;
+import christopher.tutorial.init.blocks.CustomBlockFurnace;
+import christopher.tutorial.init.blocks.DiamondBrick;
+import christopher.tutorial.init.blocks.DiamondBrickStairs;
+import christopher.tutorial.init.blocks.ExperienceOre;
+import christopher.tutorial.init.blocks.fence.DiamondBrickFence;
+import christopher.tutorial.init.blocks.fence.DiamondBrickFenceGate;
+import christopher.tutorial.init.blocks.slab.DiamondBrickDoubleSlab;
+import christopher.tutorial.init.blocks.slab.DiamondBrickHalfSlab;
+import christopher.tutorial.init.blocks.RedNetherBrickStairs;
 
 public class BlockInit 
 {
@@ -34,6 +32,9 @@ public class BlockInit
 	
 	public static CustomBlockFurnace custom_furnace_idle, custom_furnace_active;
 	
+	public static ExperienceOre experience_ore;
+	
+	public static RedNetherBrickStairs red_nether_brick_stairs;
 	
 	public static void init()
 	{
@@ -45,6 +46,8 @@ public class BlockInit
 		diamond_brick_fence_gate = new DiamondBrickFenceGate("diamond_brick_fence_gate", 45.0F, 25000000.0F);
 		custom_furnace_active = new CustomBlockFurnace("custom_furnace_active", 45.0F, 25000000.0F, true);
 		custom_furnace_idle = new CustomBlockFurnace("custom_furnace_idle", 45.0F, 25000000.0F, false);
+		experience_ore = new ExperienceOre("experience_ore", 45.0F, 25000000.0F);
+		red_nether_brick_stairs = new RedNetherBrickStairs("red_nether_brick_stairs", Blocks.NETHER_BRICK_STAIRS.getDefaultState());
 	}
 	
 	public static void register()
@@ -55,11 +58,12 @@ public class BlockInit
 		ForgeRegistries.BLOCKS.register(diamond_brick_slab_double);
 		registerBlock(diamond_brick_fence);
 		registerBlock(diamond_brick_fence_gate);
+		registerBlock(red_nether_brick_stairs);
 		
 		registerBlock(custom_furnace_idle);
 		ForgeRegistries.BLOCKS.register(custom_furnace_active);
 		
-		
+		registerBlock(experience_ore);
 	}
 	
 	public static void registerBlock(Block block)
