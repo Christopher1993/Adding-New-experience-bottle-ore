@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "christopher:half_slab_red_nether_brick" },
+        "half=top": { "model": "christopher:upper_slab_red_nether_brick" }
+    }
+}
