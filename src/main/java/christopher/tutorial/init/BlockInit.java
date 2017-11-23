@@ -15,11 +15,13 @@ import christopher.tutorial.init.blocks.CustomBlockFurnace;
 import christopher.tutorial.init.blocks.DiamondBrick;
 import christopher.tutorial.init.blocks.DiamondBrickStairs;
 import christopher.tutorial.init.blocks.ExperienceOre;
+import christopher.tutorial.init.blocks.RedNetherBrickStairs;
 import christopher.tutorial.init.blocks.fence.DiamondBrickFence;
 import christopher.tutorial.init.blocks.fence.DiamondBrickFenceGate;
 import christopher.tutorial.init.blocks.slab.DiamondBrickDoubleSlab;
 import christopher.tutorial.init.blocks.slab.DiamondBrickHalfSlab;
-import christopher.tutorial.init.blocks.RedNetherBrickStairs;
+import christopher.tutorial.init.blocks.slab.RedNetherBrickDoubleSlab;
+import christopher.tutorial.init.blocks.slab.RedNetherBrickHalfSlab;
 
 public class BlockInit 
 {
@@ -35,6 +37,8 @@ public class BlockInit
 	public static ExperienceOre experience_ore;
 	
 	public static RedNetherBrickStairs red_nether_brick_stairs;
+	public static RedNetherBrickHalfSlab red_nether_brick_slab;
+	public static RedNetherBrickDoubleSlab red_nether_brick_slab_double;
 	
 	public static void init()
 	{
@@ -48,6 +52,8 @@ public class BlockInit
 		custom_furnace_idle = new CustomBlockFurnace("custom_furnace_idle", 45.0F, 25000000.0F, false);
 		experience_ore = new ExperienceOre("experience_ore", 45.0F, 25000000.0F);
 		red_nether_brick_stairs = new RedNetherBrickStairs("red_nether_brick_stairs", Blocks.NETHER_BRICK_STAIRS.getDefaultState());
+		red_nether_brick_slab = new RedNetherBrickHalfSlab("red_nether_brick_slab");
+		red_nether_brick_slab_double = new RedNetherBrickDoubleSlab("red_nether_brick_slab_double");
 	}
 	
 	public static void register()
@@ -64,6 +70,8 @@ public class BlockInit
 		ForgeRegistries.BLOCKS.register(custom_furnace_active);
 		
 		registerBlock(experience_ore);
+		registerBlock(red_nether_brick_slab, new ItemSlab(red_nether_brick_slab, red_nether_brick_slab, red_nether_brick_slab_double));
+		ForgeRegistries.BLOCKS.register(red_nether_brick_slab_double);
 	}
 	
 	public static void registerBlock(Block block)
