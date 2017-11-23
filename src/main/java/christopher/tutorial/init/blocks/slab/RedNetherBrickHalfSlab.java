@@ -1,8 +1,8 @@
 package christopher.tutorial.init.blocks.slab;
 
-public class RedNetherBrickDoubleSlab extends RedNetherBrickSlab
+public class RedNetherBrickHalfSlab extends RedNetherBrickSlab
 {
-	public RedNetherBrickDoubleSlab(String name)
+	public RedNetherBrickHalfSlab(String name)
 	{
 		super(name);
 	}
@@ -10,6 +10,6 @@ public class RedNetherBrickDoubleSlab extends RedNetherBrickSlab
 	@Override
 	public boolean isDouble()
 	{
-		return true;
+		return false;
 	}
 }

@@ -69,7 +69,7 @@ public abstract class DiamondBrickSlab extends BlockSlab
 	@Override
 	public int getMetaFromState(IBlockState state) 
 	{
-		if(!this.isDouble())
+		if(this.isDouble())
 		{
 			return 0;
 		}
