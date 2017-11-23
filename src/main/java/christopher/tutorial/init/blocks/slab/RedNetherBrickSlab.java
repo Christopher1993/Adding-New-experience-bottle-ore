@@ -13,7 +13,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class RedNetherBrickSlab extends BlockSlab 
+public abstract class RedNetherBrickSlab extends BlockSlab 
 {
 	public RedNetherBrickSlab(String name)
 	{
@@ -88,7 +88,5 @@ public class RedNetherBrickSlab extends BlockSlab
 	protected BlockStateContainer createBlockState() 
 	{
 		return new BlockStateContainer(this, new IProperty[] {HALF});
-	}
-
 	}
 }
