@@ -18,6 +18,7 @@ import christopher.tutorial.init.blocks.ExperienceOre;
 import christopher.tutorial.init.blocks.RedNetherBrickStairs;
 import christopher.tutorial.init.blocks.fence.DiamondBrickFence;
 import christopher.tutorial.init.blocks.fence.DiamondBrickFenceGate;
+import christopher.tutorial.init.blocks.fence.RedNetherBrickFence;
 import christopher.tutorial.init.blocks.slab.DiamondBrickDoubleSlab;
 import christopher.tutorial.init.blocks.slab.DiamondBrickHalfSlab;
 import christopher.tutorial.init.blocks.slab.RedNetherBrickDoubleSlab;
@@ -39,6 +40,7 @@ public class BlockInit
 	public static RedNetherBrickStairs red_nether_brick_stairs;
 	public static RedNetherBrickHalfSlab red_nether_brick_slab;
 	public static RedNetherBrickDoubleSlab red_nether_brick_slab_double;
+	public static RedNetherBrickFence red_nether_brick_fence;
 	
 	public static void init()
 	{
@@ -54,6 +56,7 @@ public class BlockInit
 		red_nether_brick_stairs = new RedNetherBrickStairs("red_nether_brick_stairs", Blocks.NETHER_BRICK_STAIRS.getDefaultState());
 		red_nether_brick_slab = new RedNetherBrickHalfSlab("red_nether_brick_slab");
 		red_nether_brick_slab_double = new RedNetherBrickDoubleSlab("red_nether_brick_slab_double");
+		red_nether_brick_fence = new RedNetherBrickFence("red_nether_brick_fence", 2.0F, 30.0F);
 	}
 	
 	public static void register()
@@ -72,6 +75,7 @@ public class BlockInit
 		registerBlock(experience_ore);
 		registerBlock(red_nether_brick_slab, new ItemSlab(red_nether_brick_slab, red_nether_brick_slab, red_nether_brick_slab_double));
 		ForgeRegistries.BLOCKS.register(red_nether_brick_slab_double);
+		registerBlock(red_nether_brick_fence);
 	}
 	
 	public static void registerBlock(Block block)
