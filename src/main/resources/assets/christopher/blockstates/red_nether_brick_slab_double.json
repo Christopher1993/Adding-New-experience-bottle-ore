@@ -1,6 +1,6 @@
 {
     "variants": {
-        "normal": { "model": "red_nether_brick" },
-        "all":    { "model": "red_nether_brick" }
+        "half=top": { "model": "red_nether_brick" },
+        "half=bottom":    { "model": "red_nether_brick" }
     }
 }
