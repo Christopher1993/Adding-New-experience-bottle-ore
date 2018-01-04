@@ -2,26 +2,26 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:end_stone"
+      "minecraft:quartz_ore"
     ]
   },
   "criteria": {
-    "has_ender_pearl": {
+    "has_quartz": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:ender_pearl"
+            "item": "minecraft:quartz"
           }
         ]
       }
     },
-     "has_cobblestone": {
+     "has_netherrack": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:cobblestone"
+            "item": "minecraft:netherrack"
           }
         ]
       }
@@ -29,14 +29,14 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:end_stone"
+        "recipe": "minecraft:quartz_ore"
       }
     }
   },
   "requirements": [
     [
-      "has_ender_pearl",
-      "has_cobblestone",
+      "has_quartz",
+      "has_netherrack",
       "has_the_recipe"
     ]
   ]
