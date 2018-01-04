@@ -5,7 +5,6 @@ import java.util.Random;
 import christopher.tutorial.init.BlockInit;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.BlockSlab.EnumBlockHalf;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;

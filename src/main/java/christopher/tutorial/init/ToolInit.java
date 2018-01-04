@@ -16,7 +16,7 @@ import christopher.tutorial.Reference;
 
 public class ToolInit 
 {
-	public static final ToolMaterial christopher = EnumHelper.addToolMaterial("emerald", 3, 100000, 1000.0F, 1000.0F, 1000);
+	public static final ToolMaterial christopher = EnumHelper.addToolMaterial("emerald", 3, 100000, 1000.0F, 1000.0F, 100);
 	
 	public static Item emerald_pickaxe, emerald_axe, emerald_hoe, emerald_shovel, emerald_sword;
 	

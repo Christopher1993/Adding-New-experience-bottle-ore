@@ -4,6 +4,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import christopher.tutorial.gen.ExperienceOreGen;
 import christopher.tutorial.init.ArmorInit;
 import christopher.tutorial.init.BlockInit;
+import christopher.tutorial.init.EntityInit;
 import christopher.tutorial.init.Fuels;
 import christopher.tutorial.init.ItemInit;
 import christopher.tutorial.init.ToolInit;
@@ -34,5 +35,8 @@ public class RegistryHandler
 		GUIHandler.register();
 		
 		GameRegistry.registerWorldGenerator(new ExperienceOreGen(), 0);
+		EntityInit.registerEntities();
+		
+		RenderHandler.registerEntityRenders();
 	}
 }

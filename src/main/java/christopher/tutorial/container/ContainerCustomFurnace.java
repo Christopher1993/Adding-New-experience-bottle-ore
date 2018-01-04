@@ -167,4 +167,3 @@ public class ContainerCustomFurnace extends Container
     }
 
 }
-

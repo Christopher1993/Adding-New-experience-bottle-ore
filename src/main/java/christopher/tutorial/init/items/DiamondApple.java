@@ -1,5 +1,6 @@
 package christopher.tutorial.init.items;
 
+import christopher.tutorial.Tutorial;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -17,7 +18,7 @@ public class DiamondApple extends ItemFood
 		super(amount, isWolfFood);
 		setUnlocalizedName("diamond_apple");
 		setRegistryName("diamond_apple");
-		setCreativeTab(CreativeTabs.FOOD);
+		setCreativeTab(Tutorial.christophertab);
 		this.setAlwaysEdible();
 	}
 
