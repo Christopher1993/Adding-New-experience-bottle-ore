@@ -2,6 +2,8 @@ package christopher.tutorial.entity;
 
 import javax.annotation.Nullable;
 
+import christopher.tutorial.handlers.LootTableHandler;
+
 import com.google.common.base.Predicate;
 
 import net.minecraft.entity.EntityAgeable;
@@ -23,6 +25,7 @@ import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 
@@ -75,6 +78,12 @@ public class EntityDiamondBrickGolem extends EntityIronGolem
 	public EntityIronGolem createChild(EntityAgeable ageable)
 	{
 		return new EntityDiamondBrickGolem(world);
+	}
+	
+	@Override
+	protected ResourceLocation getLootTable() 
+	{
+		return LootTableHandler.DIAMONDBRICKGOLEM;
 	}
 
 	@Override
