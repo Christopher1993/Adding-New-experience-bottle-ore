@@ -79,5 +79,8 @@ public class ModelDiamondBrickGolem extends ModelBase {
     	
     	this.IronGolemHead.rotateAngleY = netHeadYaw * 0.017453292F;
     	this.IronGolemHead.rotateAngleX = headPitch * 0.017453292F;
+    	
+    	this.IronGolemNose.rotateAngleY = netHeadYaw * 0.017453292F;
+    	this.IronGolemNose.rotateAngleX = headPitch * 0.017453292F;
     }
 }
