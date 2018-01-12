@@ -1,0 +1,21 @@
+{
+    "pools": [
+        {
+            "name": "DiamondBrickGolem",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 100,
+                    "name": "christopher:diamond_brick",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": 64
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
