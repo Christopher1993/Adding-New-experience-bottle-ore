@@ -2,6 +2,7 @@ package christopher.tutorial.handlers;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import christopher.tutorial.gen.ExperienceOreGen;
+import christopher.tutorial.gen.WorldGenCustomStructures;
 import christopher.tutorial.init.ArmorInit;
 import christopher.tutorial.init.BlockInit;
 import christopher.tutorial.init.EntityInit;
@@ -35,6 +36,7 @@ public class RegistryHandler
 		GUIHandler.register();
 		
 		GameRegistry.registerWorldGenerator(new ExperienceOreGen(), 0);
+		GameRegistry.registerWorldGenerator(new WorldGenCustomStructures(), 0);
 		EntityInit.registerEntities();
 		
 		RenderHandler.registerEntityRenders();
