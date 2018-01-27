@@ -10,6 +10,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.BiomeForest;
+import net.minecraft.world.biome.BiomeJungle;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -20,6 +21,7 @@ import christopher.tutorial.gen.generators.WorldGenStructure;
 public class WorldGenCustomStructures implements IWorldGenerator
 {
 	public static final WorldGenStructure BIRCHVILLAGERHOUSE = new WorldGenStructure("birch_house");
+	public static final WorldGenStructure JUNGLEVILLAGERHOUSE = new WorldGenStructure("jungle_house");
 	
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) 
@@ -33,6 +35,7 @@ public class WorldGenCustomStructures implements IWorldGenerator
 		case 0:
 			
 			generateStructure(BIRCHVILLAGERHOUSE, world, random, chunkX, chunkZ, 25, Blocks.GRASS, BiomeForest.class);
+			generateStructure(JUNGLEVILLAGERHOUSE, world, random, chunkX, chunkZ, 25, Blocks.GRASS, BiomeJungle.class);
 			
 			break;
 			
